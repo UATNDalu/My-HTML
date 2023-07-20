@@ -1,0 +1,54 @@
+My First Try
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML Page</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My First HTML Page</h1>
+    </header>
+    <main>
+        <p>This is a simple HTML page created using HTML5.</p>
+        <p>Hello World.</p>
+    </main>
+    <footer>
+        <p>This Was A Triumph...</p>
+    </footer>
+</body>
+</html>
+
+Image Test
+<!DOCTYPE html>
+<html>
+<head>
+	<title>It's Morbin Time</title>
+</head>
+<body>
+	<h1>This Is My First Attempt At An Image</h1>
+	<p>This is a bucket...</p>
+	<img src=https://i.kym-cdn.com/entries/icons/original/000/038/583/bucket.jpg>
+</body>
+</html>
+
+Boards
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- html is super straight foward -->
+	<title>This is my board</title>
+</head>
+	<!-- making the body paragraphs are simple -->
+<body>
+	<h1>These are my programming objectives</h1>
+	<p>C/C++ Programming 1</p>
+	<p>Introduction to Databases</p>
+	<p>Internet of Things</p>
+	<p>Linux Operating System</p>
+	<p>Designing Website Interfaces 1</p>
+	<p>C++ Programming 2</p>
+</body>
+</html>
+	<!-- ending the code is very easy as it just needs a /and the type of code you used -->
