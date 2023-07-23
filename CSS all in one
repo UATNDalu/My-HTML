@@ -1,0 +1,97 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML Page</title>
+	<link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My First HTML Page</h1>
+    </header>
+    <main>
+        <p>This is a simple HTML page created using HTML5.</p>
+        <p>Hello World.</p>
+    </main>
+    <footer>
+        <p>This Was A Triumph...</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>It's Morbin Time</title>
+</head>
+<body>
+	<h1>This Is My First Attempt At An Image</h1>
+	<p>This is a bucket...</p>
+	<center><img width=400 src=https://i.kym-cdn.com/entries/icons/original/000/038/583/bucket.jpg
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {text-align: center;}
+</style>
+	<!-- html is super straight foward -->
+	<title>This is my board</title>
+</head>
+<body>
+	<h1>These are my programming objectives</h1>
+	<p>C/C++ Programming 1</p>
+	<p>Introduction to Databases</p>
+	<p>Internet of Things</p>
+	<p>Linux Operating System</p>
+	<p>Designing Website Interfaces 1</p>
+	<p>C++ Programming 2</p>
+</body>
+</html>
+
+CSS
+html, body
+{
+    width: 100%;
+    height: 150%;
+}
+body
+{
+    …
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+body {
+  background-color: #0000FF;
+  color: #ADD8E6;
+}
+nav {
+  height: 6000px;
+  width: 200px;
+  float: left;
+  padding: 5px;
+  line-height: 30px;
+}
+footer {
+  text-align: left;
+}
+#memeImage {
+  margin-right: 200px;
+}
+header {
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
