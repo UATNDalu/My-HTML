@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palindrome Checker</title>
+    <title>Palindrome Checker and Secret Message</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,39 +23,87 @@
             max-width: 150px;
             margin-top: 20px;
         }
+
+        .warning {
+            color: red;
+        }
+
+        #inputContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            margin: 10px;
+            padding: 5px;
+            width: 250px;
+        }
+
+        #submitBtn {
+            cursor: pointer;
+            background-color: #336699;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #secretMessage {
+            font-weight: bold;
+            color: #336699;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Palindrome Checker</h1>
+    <h1>Palindrome Checker and Secret Message</h1>
     <img src="your-image.jpg" alt="Your Image">
+    <div id="inputContainer">
+        <!-- First name input -->
+        <input type="text" id="firstNameInput" placeholder="Enter your first name" required>
+
+        <!-- Last name input -->
+        <input type="text" id="lastNameInput" placeholder="Enter your last name" required>
+
+        <!-- Zip code input -->
+        <input type="text" id="zipCodeInput" placeholder="Enter your zip code (5 digits)" required>
+
+        <!-- Submit button -->
+        <button id="submitBtn">Submit</button>
+    </div>
+    <div id="secretMessage"></div>
+
     <script>
-        // Function to check if a word is a palindrome
         function isPalindrome(word) {
             const cleanWord = word.replace(/\s/g, '').toLowerCase();
             const reversedWord = cleanWord.split('').reverse().join('');
             return cleanWord === reversedWord;
         }
 
-        // Main loop to prompt user for strings
-        let continueChecking = true;
-        while (continueChecking) {
-            // Ask user for input
-            const userInput = prompt('Enter a word (or "exit" to stop):');
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            const firstName = document.getElementById('firstNameInput').value.trim();
+            const lastName = document.getElementById('lastNameInput').value.trim();
+            const zipCode = document.getElementById('zipCodeInput').value.trim();
 
-            if (userInput === null) {
-                continueChecking = false; // User clicked cancel, exit the loop
-            } else {
-                const cleanInput = userInput.trim(); // Remove leading/trailing spaces
-                if (cleanInput.toLowerCase() === 'exit') {
-                    continueChecking = false; // User wants to exit, break the loop
-                } else {
-                    const isPalin = isPalindrome(cleanInput);
-                    const result = isPalin ? 'is a palindrome!' : 'is not a palindrome!';
-                    alert(`"${cleanInput}" ${result}`);
-                }
+            // Check first name + last name length
+            const fullName = `${firstName} ${lastName}`;
+            if (fullName.length > 20) {
+                alert('Full name should not exceed 20 characters.');
+                return;
             }
-        }
+
+            // Check valid zip code
+            if (!/^\d{5}$/.test(zipCode)) {
+                alert('Invalid zip code. Please enter 5 digits.');
+                return;
+            }
+
+            // Secret message
+            const secretMessage = 'Congratulations! You found the secret message!';
+            document.getElementById('secretMessage').textContent = secretMessage;
+        });
     </script>
 </body>
 
