@@ -1,0 +1,62 @@
+<!-- strings.html by [Your Name] -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #336699;
+        }
+
+        img {
+            max-width: 150px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Palindrome Checker</h1>
+    <img src="your-image.jpg" alt="Your Image">
+    <script>
+        // Function to check if a word is a palindrome
+        function isPalindrome(word) {
+            const cleanWord = word.replace(/\s/g, '').toLowerCase();
+            const reversedWord = cleanWord.split('').reverse().join('');
+            return cleanWord === reversedWord;
+        }
+
+        // Main loop to prompt user for strings
+        let continueChecking = true;
+        while (continueChecking) {
+            // Ask user for input
+            const userInput = prompt('Enter a word (or "exit" to stop):');
+
+            if (userInput === null) {
+                continueChecking = false; // User clicked cancel, exit the loop
+            } else {
+                const cleanInput = userInput.trim(); // Remove leading/trailing spaces
+                if (cleanInput.toLowerCase() === 'exit') {
+                    continueChecking = false; // User wants to exit, break the loop
+                } else {
+                    const isPalin = isPalindrome(cleanInput);
+                    const result = isPalin ? 'is a palindrome!' : 'is not a palindrome!';
+                    alert(`"${cleanInput}" ${result}`);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
